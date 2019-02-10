@@ -14,7 +14,7 @@ getData()  {
 }
 age = 25;
 postData(body){
-  //console.log('Step 2', body);
+  console.log('Step 2', body);
   return this.myhttp.post('http://localhost:3000/save', body );
 }
 //getData() {
