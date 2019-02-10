@@ -1,0 +1,33 @@
+<h2>Login Form</h2>
+
+<form [formGroup]="loginForm">
+  <div class="imgcontainer">
+    <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" formControlName="name">
+<div *ngIf ="!getLoginemail().valid">Not Valid</div> 
+<label><b>Password</b></label>
+
+    <input type="password" placeholder="Password" formControlName="password">
+<div *ngIf ="!getPassword().valid">
+
+  <div class="alert alert-danger">
+    <strong>Wrong!</strong>Length should be 6.
+  </div>
+  
+
+</div> 
+        
+    <button type="submit" (click) = "saveUser()">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
